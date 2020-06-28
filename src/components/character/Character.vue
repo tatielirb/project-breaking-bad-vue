@@ -2,7 +2,7 @@
   <div id="character">
     <div class="container">
       <div class="row">
-        <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 " v-for="person of persons" :key="person.char_id">
+        <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 " v-for="person of persons" :key="person.char_id"  v-show="person.category !== 'Better Call Saul'">
           <div class="card mb-3">
             <div class="row no-gutters">
               <div class="col-md-12 align-self-center">
@@ -33,7 +33,6 @@
                   <p class="card-text text-left">
                     <strong>Status:</strong><small>{{ person.status }}</small>
                   </p>
-                  <p>{{ person.category }}</p>
                 </div>
               </div>
             </div>
@@ -48,22 +47,19 @@
 import { Component, Vue } from 'vue-property-decorator';
 import { CharacterService } from './../../service/character/CharacterService';
 import { ListCharacter } from '@/types/ListCharacter';
-import GetCharacter from './../../service/GetCharacter'
+import GetCharacter from './../../service/GetCharacter';
 
 @Component
 export default class Character extends Vue {
-  private persons: ListCharacter[] =[];
-
-  
+  private persons: ListCharacter[] = [];
 
   mounted() {
     this.listar();
   }
-  public listar(){
-      GetCharacter
-      .listar()
-      .then((resposta) => {
-        this.persons = resposta
+  public listar() {
+    GetCharacter.listar()
+      .then(resposta => {
+        this.persons = resposta;
       })
       .catch((err: any) => {
         err.message;
