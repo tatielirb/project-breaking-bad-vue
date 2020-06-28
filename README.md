@@ -4,12 +4,19 @@
 * [Node.js](https://nodejs.org/) 
 * [Vue CLI](https://cli.vuejs.org/) 
 
-### Technologies  ###
-The technologies used in this project were:
 
-* [Node.js](https://nodejs.org/) 
-* [Vue CLI](https://cli.vuejs.org/) 
-* [Less](https://sass-lang.com/) 
+### Commands  ###
+It may be that your operating system returns some error requesting a vue-cli installation globally
+
+```
+ yarn global add @vue/cli
+```
+
+Then enter the folder by typing:
+
+```
+cd project-breaking-bad-vue
+```
 
 ## Project setup
 ```
