@@ -1,5 +1,16 @@
 # project-breaking-bad-vue
 
+### Prerequisites  ###
+* [Node.js](https://nodejs.org/) 
+* [Vue CLI](https://cli.vuejs.org/) 
+
+### Technologies  ###
+The technologies used in this project were:
+
+* [Node.js](https://nodejs.org/) 
+* [Vue CLI](https://cli.vuejs.org/) 
+* [Less](https://sass-lang.com/) 
+
 ## Project setup
 ```
 yarn install
